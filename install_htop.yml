@@ -1,0 +1,5 @@
+- hosts: servers
+  become: true
+  tasks:
+        - name: Install htop
+        - yum: name=htop
