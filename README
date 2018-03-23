@@ -1,0 +1,7 @@
+On Ansible Server
+
+generate Keys for the user shailesh and exchange them with other hosts
+ssh-key-gen -t RSA -C "mail2shailesh@ymail.com"
+ssh-copy-id
+eval `ssh-agent`
+ssh-add
