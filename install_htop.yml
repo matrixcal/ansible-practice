@@ -1,5 +1,13 @@
 - hosts: servers
   become: true
+  remote_user: shailesh
   tasks:
+        - name: Install EPEL
+          yum:
+             name: epel-release
+             state: latest
+
         - name: Install htop
-        - yum: name=htop
+          yum: 
+              name: htop
+              state: latest
