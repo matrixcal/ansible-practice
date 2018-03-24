@@ -1,0 +1,9 @@
+- name: Install httpd
+  hosts: servers
+  become: yes
+  remote_user: shailesh
+  tasks:
+  - name: Install httpd
+    yum:
+     name: httpd
+     state: latest
