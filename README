@@ -5,3 +5,6 @@ ssh-key-gen -t RSA -C "mail2shailesh@ymail.com"
 ssh-copy-id
 eval `ssh-agent`
 ssh-add
+
+Running adhoc commands 
+ansible servers -a "/sbin/reboot" --become --ask-become-pass  -vvv 
