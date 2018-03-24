@@ -1,6 +1,8 @@
-- hosts: servers
+- name: Disable SELinux from hosts
+  hosts: servers
   become: true
   remote_user: shailesh
   tasks:
-       - selinux:
-         state: disabled 
+   - name: Disabling SELinux
+     selinux:
+     state: disabled 
