@@ -1,0 +1,14 @@
+- name: "Install postfix"
+  hosts: servers
+  become: yes
+  gather_facts: yes
+  tasks:
+  - name: Install Postfix(task)
+    yum: name=postfix state=latest
+    notify: 
+    - restart postfix
+  - name: ensure that jetty is running
+    service: name=postfix state=started enabled=yes
+  handlers:
+  - name: restart postfix
+    service: name=postfix state=restarted
