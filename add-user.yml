@@ -1,0 +1,10 @@
+ - name: "Create testuser1"
+   hosts: servers
+   become: yes
+   remote_user: shailesh
+   tasks:
+   - name: "Create testruser1"
+     user:
+      name: testuser1
+      state: present
+      groups: wheel
